@@ -1,0 +1,16 @@
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+.imagen {
+    width: 320px;
+    height: 340px;
+    border-radius: 30px;
+    transition: transform 0.2s;
+    object-fit: cover;
+  }
+  
+  .card:hover .imagen {
+    transform: scale(1.1);
+  }
