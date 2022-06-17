@@ -19,9 +19,6 @@ const Card = ({ personajes }) => {
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
                   <h3 className="mb-4 text-2xl">{personaje.name}</h3>
-                  <div className="mb-4 text-grey-darker text-sm flex-1">
-                    <p>ID: {personaje.id}</p>
-                  </div>
                   <Link to={`item/${personaje.id}`}>
                     <button className="rounded-lg p-2 shadow-lg shadow-red-100">
                       Mas detalles
