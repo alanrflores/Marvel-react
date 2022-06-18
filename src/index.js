@@ -8,6 +8,7 @@ import Inicio from "./componentes/views/Inicio";
 import Item from "./componentes/item/Item";
 import GlobalContext from "./context/GlobalContext";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -18,7 +19,9 @@ root.render(
           <Route index element={<Inicio />} />
           <Route path="/app">
             <Route index element={<App />} />
-            <Route path="item/:id" element={<Item />} />
+            <Route path="item/:id" element={<Item />}>
+            
+            </Route>
           </Route>
         </Route>
       </Routes>
