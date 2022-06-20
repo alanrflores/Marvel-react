@@ -38,7 +38,7 @@ const App = () => {
     <>
       <div className="container max-h-full">
         <div className="flex justify-center py-3">
-        <div className="w-96">
+        <div className="w-96 pt-4">
         <input
           type="search"
           className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

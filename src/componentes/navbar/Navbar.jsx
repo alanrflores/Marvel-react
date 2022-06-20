@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   
   return (
-    <nav className="flex sm:justify-center space-x-4 px-3 py-3">
+    <nav className=" flex sm:justify-center space-x-4 px-3 py-3 rounded-lg">
   {[
     ['Inicio', '/'],
     ['Personajes', '/app'],
