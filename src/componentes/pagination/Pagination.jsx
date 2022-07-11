@@ -1,31 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect , useContext} from 'react'
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+import { Global } from '../../context/GlobalContext';
 
 const Pagination = ({pagina, setPagina, fetch}) => {
-const [offset, setOffset] = useState(0);
+const {offsetOne, setOffsetOne} = useContext(Global)
 
-const lastPage = ()=>{
+const previouPage = ()=>{
     const lastP = Math.max(pagina - 1)
     setPagina(lastP)
-    if(offset > 0) {
-        setOffset(offset - 30)
+    if(offsetOne > 0) {
+        setOffsetOne(offsetOne - 30)
     }
-    fetch(30, offset)
+    fetch(30, offsetOne - 30)
 }
 
 const nextPage = ()=>{
     const nextP = Math.min(pagina + 1)
     setPagina(nextP)
-    setOffset(offset + 30)
-    fetch(30, offset + 30)
+    setOffsetOne(offsetOne + 30)
+    fetch(30, offsetOne + 30)
 }
+
+
+
   return (
     <div className='container w-full'>
-    <div className='flex justify-center'>
-        <button className='mx-4 w-24' onClick={lastPage} >
-        👈 
+    <div className='flex justify-between'>
+        <button className='m-2 p-1 border-b-4 border-red-800' onClick={previouPage} >
+        <FaArrowAltCircleLeft className=''/>
         </button>
-        <button className='mx-4 w-24' onClick={nextPage} >
-        👉 
+        <button className='m-2 p-1 border-b-4 border-red-800' onClick={nextPage} >
+        <FaArrowAltCircleRight className='' />
         </button>
     </div>
     </div>

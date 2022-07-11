@@ -30,9 +30,19 @@
 
 .containerTitulo > h1 {
     font-size: 30px;
-    color: aliceblue;
+    color: rgb(148, 147, 147);
 }
 .containerTitulo > p {
     font-size: 15px;
-    color: aliceblue;
+    color: rgb(132, 132, 132);
+    padding: 10px;
+}
+.btn{
+    border-radius: 10px;
+    color: gray;
+    
+}
+.marvelStudios{
+width: 300px;
+height: 150px;
 }

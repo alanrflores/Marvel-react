@@ -29,7 +29,7 @@ const Slide = ({ user }) => {
   console.log(comics);
   return (
     <>
-      {comics.length > 0 ? (
+      {comics ? (
         //<!-- comics -->
 
         <div className="h-screen  flex items-center justify-center">
@@ -42,7 +42,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[0]
-                      ? `${comics[0].images[0].path}.${comics[0].images[0].extension}`
+                      ? `${comics[0].images[0]?.path}.${comics[0].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -51,25 +51,25 @@ const Slide = ({ user }) => {
 
               {/* <!-- titulo--> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[0] ? comics[0].title : ""}
+                {comics[0] ? comics[0].title :<h2>Not available</h2>}
               </h5>
 
               {/* <!-- precio --> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                $ {comics[0] ? comics[0].prices[0].price : ""}
+                 {comics[0] ? comics[0].prices[0].price : <h2>Not available</h2>}
               </p>
 
               {/* <!-- formato --> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[0] ? comics[0].format : ""}
+                  {comics[0] ? comics[0].format : <h2>Not available</h2>}
                 </p>
                 <button
                   onClick={() =>
                     handleClick`${Swal.fire({
                       title: `${comics[0].title}`,
                       text: `${comics[0].description}`,
-                      imageUrl: `${comics[0].images[0].path}.${comics[0].images[0].extension}`,
+                      imageUrl: `${ comics[0].images[0].path}.${comics[0].images[0].extension}`,
                       imageWidth: 600,
                       imageHeight: 400,
                       imageAlt: "Custom image",
@@ -88,7 +88,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[1]
-                      ? `${comics[1].images[0].path}.${comics[1].images[0].extension}`
+                      ? `${comics[1].images[0]?.path}.${comics[1].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -96,23 +96,23 @@ const Slide = ({ user }) => {
               </div>
               s{/* <!-- titulo --> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[1] ? comics[1].title : ""}
+                {comics[1] ? comics[1].title : <h2>Not available</h2>}
               </h5>
               {/* <!-- precio --> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                $ {comics[1] ? comics[1].prices[0].price : ""}
+                {comics[1] ? comics[1].prices[0].price : <h2>Not available</h2>}
               </p>
               {/* <!-- formato --> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[1] ? comics[1].format : ""}
+                  {comics[1] ? comics[1].format : <h2>Not available</h2>}
                 </p>
                 <button
                   onClick={() =>
                     handleClick`${Swal.fire({
                       title: `${comics[1].title}`,
                       text: `${comics[1].description}`,
-                      imageUrl: `${comics[1].images[0].path}.${comics[1].images[0].extension}`,
+                      imageUrl:  `${ comics[1].images[0].path}.${comics[1].images[0].extension}`,
                       imageWidth: 600,
                       imageHeight: 400,
                       imageAlt: "Custom image",
@@ -132,7 +132,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[2]
-                      ? `${comics[2].images[0].path}.${comics[2].images[0].extension}`
+                      ? `${comics[2].images[0]?.path}.${comics[2].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -141,25 +141,25 @@ const Slide = ({ user }) => {
 
               {/* <!-- titulo --> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[2] ? comics[2].title : ""}
+                {comics[2] ? comics[2].title : <h2>Not available</h2>}
               </h5>
 
               {/* <!-- precio--> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                {comics[2] ? comics[2].prices[0].price : ""}
+                {comics[2] ? comics[2].prices[0].price : <h2>Not available</h2>}
               </p>
 
               {/* <!-- formato--> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[2] ? comics[2].format : ""}
+                  {comics[2] ? comics[2].format :<h2>Not available</h2>}
                 </p>
                 <button
                   onClick={() =>
                     handleClick`${Swal.fire({
                       title: `${comics[2].title}`,
                       text: `${comics[2].description}`,
-                      imageUrl: `${comics[2].images[0].path}.${comics[2].images[0].extension}`,
+                      imageUrl: `${ comics[2].images[0].path}.${comics[2].images[0].extension}`,
                       imageWidth: 600,
                       imageHeight: 400,
                       imageAlt: "Custom image",
@@ -179,7 +179,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[3]
-                      ? `${comics[3].images[0].path}.${comics[3].images[0].extension}`
+                      ? `${comics[3].images[0]?.path}.${comics[3].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -188,18 +188,18 @@ const Slide = ({ user }) => {
 
               {/* <!-- titulo --> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[3] ? comics[3].title : ""}
+                {comics[3] ? comics[3].title :<h2>Not available</h2>}
               </h5>
 
               {/* <!-- precio --> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                {comics[3] ? comics[3].prices[0].price : ""}
+                {comics[3] ? comics[3].prices[0].price : <h2>Not available</h2>}
               </p>
 
               {/* <!-- formato --> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[3] ? comics[3].format : ""}
+                  {comics[3] ? comics[3].format :<h2>Not available</h2>}
                 </p>
                 <button
                   onClick={() =>
@@ -226,7 +226,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[4]
-                      ? `${comics[4].images[0].path}.${comics[4].images[0].extension}`
+                      ? `${comics[4].images[0]?.path}.${comics[4].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -235,25 +235,25 @@ const Slide = ({ user }) => {
 
               {/* <!-- titulo --> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[4] ? comics[4].title : ""}
+                {comics[4] ? comics[4].title : <h2>Not available</h2>}
               </h5>
 
               {/* <!-- precio --> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                {comics[4] ? comics[4].prices[0].price : ""}
+                {comics[4] ? comics[4].prices[0].price : <h2>Not available</h2>}
               </p>
 
               {/* <!-- formato --> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[4] ? comics[4].format : ""}
+                  {comics[4] ? comics[4].format : <h2>Not available</h2>}
                 </p>
                 <button
                   onClick={() =>
                     handleClick`${Swal.fire({
                       title: `${comics[4].title}`,
                       text: `${comics[4].description}`,
-                      imageUrl: `${comics[4].images[0].path}.${comics[4].images[0].extension}`,
+                      imageUrl:  `${ comics[4].images[0].path}.${comics[4].images[0].extension}`,
                       imageWidth: 600,
                       imageHeight: 400,
                       imageAlt: "Custom image",
@@ -273,7 +273,7 @@ const Slide = ({ user }) => {
                 <img
                   src={
                     comics[5]
-                      ? `${comics[5].images[0].path}.${comics[5].images[0].extension}`
+                      ? `${comics[5].images[0]?.path}.${comics[5].images[0]?.extension}`
                       : " "
                   }
                   className="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100"
@@ -282,25 +282,25 @@ const Slide = ({ user }) => {
 
               {/* <!--titulo --> */}
               <h5 className="hover:text-red-500 text-gray-200 font-semibold">
-                {comics[5] ? comics[5].title : ""}
+                {comics[5] ? comics[5].title : <h2>Not available</h2>}
               </h5>
 
               {/* <!-- precio --> */}
               <p className="hover:text-red-500 text-sm text-gray-400 -mt-1">
-                {comics[5] ? comics[5].prices[0].price : ""}
+                {comics[5] ? comics[5].prices[0].price : <h2>Not available</h2>}
               </p>
 
               {/* <!-- formato --> */}
               <div className="flex flex-row flex-wrap gap-2">
                 <p className="hover:bg-red-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full">
-                  {comics[5] ? comics[5].format : ""}
+                  {comics[5] ? comics[5].format : "Not available"}
                 </p>
                 <button
                   onClick={() =>
                     handleClick`${Swal.fire({
                       title: `${comics[5].title}`,
                       text: `${comics[5].description}`,
-                      imageUrl: `${comics[5].images[0].path}.${comics[5].images[0].extension}`,
+                      imageUrl:  `${comics[5].images[0]?.path}.${comics[5].images[0]?.extension}`,
                       imageWidth: 600,
                       imageHeight: 400,
                       imageAlt: "Custom image",

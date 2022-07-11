@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Loading from "../loading/Loading";
 import "./card.css";
 
 const Card = ({ personajes }) => {
@@ -18,9 +19,9 @@ const Card = ({ personajes }) => {
                   />
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="mb-4 text-2xl">{personaje.name}</h3>
+                  <h3 className="mb-4 text-2xl text-gray-400">{personaje.name}</h3>
                   <Link to={`item/${personaje.id}`}>
-                    <button className="rounded-lg p-2 shadow-lg shadow-red-100">
+                    <button className="rounded-lg p-2 text-gray-400 shadow-lg shadow-gray-600">
                       Mas detalles
                     </button>
                   </Link>
@@ -30,7 +31,10 @@ const Card = ({ personajes }) => {
           </div>
         ))
       ) : (
-        <h2>Cargando.....</h2>
+        <div className="h-screen col-start-2  col-span-4 ml-12">
+          <Loading/>
+        </div>
+        
       )}
     </>
   );

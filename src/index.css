@@ -8,5 +8,16 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto';
 }
+.fondo{
+  background-image: url('https://www.adslzone.net/app/uploads-adslzone.net/2020/12/Marvel_0.jpg');
+  width: 100vw;
+  height: 30vh;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+.divCard{
+  background-color: #a13f3d;
+  background-image: linear-gradient(180deg, #a13f3d 0%, #000000 100%);
+  
 
-
+}

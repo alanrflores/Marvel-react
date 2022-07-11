@@ -1,16 +1,21 @@
 import React from 'react'
+import './navbar.css'
 
 const Navbar = () => {
   
   return (
-    <nav className=" flex sm:justify-center space-x-4 px-3 py-3 rounded-lg">
+    <nav className="navbar grid grid-cols-3 gap-4 space-x-3 px-2 py-2">
+      <div class="divImagen"><img src='https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg' className='logoMarvel' /></div>
+      <div class="col-span-2">
+     
   {[
     ['Inicio', '/'],
     ['Personajes', '/app'],
     ['Sobre Nosotros', '/about'],
   ].map(([title, url]) => (
-    <a key={title} href={url} className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
+    <a key={title} href={url} className="ml-10 px-3 py-2 rounded-lg text-slate-400 font-medium hover:bg-red-800 hover:text-slate-900">{title}</a>
   ))}
+  </div>
 </nav>
 
   )
