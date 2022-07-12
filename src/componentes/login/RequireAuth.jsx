@@ -1,16 +1,12 @@
 import React, {useContext} from 'react'
 import { Navigate } from 'react-router-dom';
-import { Global } from '../../context/GlobalContext'
-import Loading from '../loading/Loading'
+import { UserContext } from '../../context/UserProvider'
 
 const RequireAuth = ({children}) => {
-    const {personajes, loading} = useContext(Global);
+    const {user} = useContext(UserContext);
 
-    if(loading) {
-        return <Loading/>
-    }
-    if(!personajes) {
-        return <Navigate to='/app'/>
+    if(!user) {
+        return <Navigate to='/'/>
     }
   return (
     <>{children}</>

@@ -37,12 +37,25 @@
     color: rgb(132, 132, 132);
     padding: 10px;
 }
-.btn{
-    border-radius: 10px;
-    color: gray;
     
-}
 .marvelStudios{
 width: 300px;
 height: 150px;
+}
+.googleDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 50px;
+}
+.googleDiv > img {
+    width: 30px;
+    height: 15;
+    margin: 4px;
+}
+
+.googleDiv > button {
+        border-radius: 10px;
+        color: rgb(210, 210, 210);
+       
 }
